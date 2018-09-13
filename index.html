@@ -229,6 +229,135 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/13/基于Aspect的热修复及其对Block的支持/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kennaki Kai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="簡無叔_MADAO">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/13/基于Aspect的热修复及其对Block的支持/" itemprop="url">基于Aspect的热修复及其对Block的支持</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-13T11:10:07+08:00">
+                2018-09-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+</blockquote>
+<p>目前很多热修复方案都被苹果禁止了，但据说基于Aspect的热修复还可以用，因为最终所有的方法实现都是oc提供的<code>NSInvocation</code>,本文分析了<a href="http://www.cocoachina.com/ios/20180817/24600.html" target="_blank" rel="noopener">LYFix</a>源码，并结合<a href="http://blog.cnbang.net/works/2767/" target="_blank" rel="noopener">bang</a>的<a href="https://github.com/bang590/JSPatch" target="_blank" rel="noopener">JSPatch</a>中的<code>JPBlockWrapper</code>实现了对Block的支持。</p>
+<blockquote>
+</blockquote>
+<h2 id="Aspect-的实现"><a href="#Aspect-的实现" class="headerlink" title="Aspect 的实现"></a>Aspect 的实现</h2><p>我们在<a href="http://www.cocoachina.com/ios/20180817/24600.html" target="_blank" rel="noopener">LYFix</a>提供的<a href="https://github.com/GitHubXuLiying/LYFix" target="_blank" rel="noopener">demo</a>工程中可以发现，它引用了一个第三方库Aspect。在Aspect的头文件中，我们可以看到两个核心方法：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// Adds a block of code before/instead/after the current `selector` for a specific class.</span></span><br><span class="line"><span class="comment">///</span></span><br><span class="line"><span class="comment">/// @param block Aspects replicates the type signature of the method being hooked.</span></span><br><span class="line"><span class="comment">/// The first parameter will be `id&lt;AspectInfo&gt;`, followed by all parameters of the method.</span></span><br><span class="line"><span class="comment">/// These parameters are optional and will be filled to match the block signature.</span></span><br><span class="line"><span class="comment">/// You can even use an empty block, or one that simple gets `id&lt;AspectInfo&gt;`.</span></span><br><span class="line"><span class="comment">///</span></span><br><span class="line"><span class="comment">/// @note Hooking static methods is not supported.</span></span><br><span class="line"><span class="comment">/// @return A token which allows to later deregister the aspect.</span></span><br><span class="line">+ (<span class="keyword">id</span>&lt;AspectToken&gt;)aspect_hookSelector:(SEL)selector</span><br><span class="line">                      withOptions:(AspectOptions)options</span><br><span class="line">                       usingBlock:(<span class="keyword">id</span>)block</span><br><span class="line">                            error:(<span class="built_in">NSError</span> **)error;</span><br><span class="line"></span><br><span class="line"><span class="comment">/// Adds a block of code before/instead/after the current `selector` for a specific instance.</span></span><br><span class="line">- (<span class="keyword">id</span>&lt;AspectToken&gt;)aspect_hookSelector:(SEL)selector</span><br><span class="line">                      withOptions:(AspectOptions)options</span><br><span class="line">                       usingBlock:(<span class="keyword">id</span>)block</span><br><span class="line">                            error:(<span class="built_in">NSError</span> **)error;</span><br></pre></td></tr></table></figure>
+<p>注释写的很清楚，这里就不做解释了，直接看核心实现：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">id</span> aspect_add(<span class="keyword">id</span> <span class="keyword">self</span>, SEL selector, AspectOptions options, <span class="keyword">id</span> block, <span class="built_in">NSError</span> **error) &#123;</span><br><span class="line">    <span class="built_in">NSCParameterAssert</span>(<span class="keyword">self</span>);</span><br><span class="line">    <span class="built_in">NSCParameterAssert</span>(selector);</span><br><span class="line">    <span class="built_in">NSCParameterAssert</span>(block);</span><br><span class="line"></span><br><span class="line">    __block AspectIdentifier *identifier = <span class="literal">nil</span>;</span><br><span class="line">    aspect_performLocked(^&#123;<span class="comment">//1</span></span><br><span class="line">        <span class="keyword">if</span> (aspect_isSelectorAllowedAndTrack(<span class="keyword">self</span>, selector, options, error)<span class="comment">/*2*/</span>) &#123;</span><br><span class="line">            AspectsContainer *aspectContainer = aspect_getContainerForObject(<span class="keyword">self</span>, selector);</span><br><span class="line">            identifier = [AspectIdentifier identifierWithSelector:selector object:<span class="keyword">self</span> options:options block:block error:error];</span><br><span class="line">            <span class="keyword">if</span> (identifier) &#123;</span><br><span class="line">                [aspectContainer addAspect:identifier withOptions:options];</span><br><span class="line"></span><br><span class="line">                <span class="comment">// Modify the class to allow message interception.</span></span><br><span class="line">                aspect_prepareClassAndHookSelector(<span class="keyword">self</span>, selector, error);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> identifier;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>核心实现代码不多，就是一个c函数，第一参数如果是类方法调用，传<code>(id)self</code>,因为这个时候<code>self</code>是不存在的，所以转为元类对象。如果是实例调用，直接传<code>self</code>。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/23/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -391,7 +520,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -399,6 +528,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
