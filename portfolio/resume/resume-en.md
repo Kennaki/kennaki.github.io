@@ -22,7 +22,8 @@ Apr 2022 — Present · On-site contracted role · Deputy R&D Team Lead (2025) /
 
 - Independently develop the hookengine static library for mobile security monitoring and maintain secure-access SDKs; lead HarmonyOS SDK delivery, expanding responsibility from iOS engineering to team coordination and full-stack delivery.
 - Sole developer of an AI-assisted API analytics pipeline, coordinating resources from Mac mini VM setup through deployment in an isolated internal environment.
-- Lead feasibility, high-level and detailed design documentation for 2024–2025 technology projects and technical presentations in Beijing. Take cross-platform ownership of an Android battery issue, identify and help fix the cause, and use evidence to clarify responsibility and support follow-on collaboration.
+- Project communication: lead feasibility, high-level and detailed design documentation for 2024–2025 technology projects; present technical findings at headquarters in Beijing.
+- Incident ownership: investigate and fix the iState Grid Android battery-drain issue through source analysis beyond my iOS remit. Present technical evidence at headquarters, reducing the team’s allocated responsibility to 50% and securing follow-on project collaboration.
 
 ### Huami Technology · Nanjing
 Feb 2020 — Mar 2022 · iOS Engineer / Device Feature Modularization Project Lead
