@@ -13,6 +13,8 @@ gaijianqiu@gmail.com · 616096372@qq.com
 
 iOS engineer with hands-on runtime security experience. Independently developed the hookengine static library after vendor support ended, covering jailbreak, debugger, injection and hook detection. Combine Objective-C/C/C++, Runtime and Mach-O knowledge with false-positive analysis and host-app reliability. Extended this SDK foundation into solo delivery of a Java/Flink API security pipeline and an existing web system’s modernization. Own work from requirements and validation through deployment; lead HarmonyOS SDK development and releases.
 
+I hold visas or entry permits for Hong Kong, Australia, New Zealand, Japan, and the Schengen Area, and am available to travel for in-person interviews. I passed CET-6 with a high score, can express my ideas in spoken English, and am currently preparing for IELTS.
+
 ## Experience
 
 ### State Grid Electric Power Research Institute
@@ -31,8 +33,8 @@ Feb 2020 — Mar 2022 · iOS Engineer / Device Feature Modularization Project Le
 ### Earlier experience
 Tuya Smart (Oct 2018–Jan 2020): commercial SDKs, Wi-Fi provisioning, ODM and CI/CD; Bluetooth, BLE Mesh and modularization across Tuya and Huami. Yoho (Mar 2016–Oct 2018): fashion commerce, React Native, live streaming, mini programs and A/B testing. Tuniu projects and early mobile work (Oct 2012–Jan 2016; Tuniu employment Mar 2014–Jan 2016): iPad commerce, travel pages, Objective-C Runtime and RunLoop.
 
-## Education & language
-B.Mgt., Nanjing University of Chinese Medicine, 2012. English: passed CET-6 with a high score; able to express my ideas in spoken English; preparing for IELTS. Experience reading technical documentation and writing commercial SDK manuals. Travel: hold visas/entry permissions for Hong Kong, Australia, New Zealand, Japan and the Schengen Area; available to travel for in-person interviews.
+## Education
+B.Mgt., Nanjing University of Chinese Medicine, 2012. Experience reading technical documentation and writing commercial SDK manuals.
 
 ## Selected projects
 
