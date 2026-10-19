@@ -9,9 +9,9 @@ gaijianqiu@gmail.com · 616096372@qq.com
 
 ## Profile
 
-**AI-accelerated builder: use Claude Code and Codex to accelerate implementation, focusing engineering judgment on architecture, native integrations, troubleshooting and refined user experiences.**
+**AI-accelerated builder with over a decade of engineering judgment. Use Claude Code and Codex to accelerate routine implementation and server-side logic, focusing my expertise on deep native OS integration, complex troubleshooting, and precise interaction and UI details. Investigate poorly documented behavior through source analysis, runtime inspection, and real-device validation, turning generated code into reliable, maintainable products.**
 
-iOS engineer with hands-on runtime security experience. Independently developed the hookengine static library after vendor support ended, covering jailbreak, debugger, injection and hook detection. Combine Objective-C/C/C++, Runtime and Mach-O knowledge with false-positive analysis and host-app reliability. Extended this SDK foundation into solo delivery of a Java/Flink API security pipeline and an existing web system’s modernization. Own work from requirements and validation through deployment; lead HarmonyOS SDK development and releases.
+Independently developed the hookengine static library for iOS security, applying Runtime, Mach-O and modern linking knowledge to hook detection, false-positive analysis and host-app lifecycle issues. Delivered an API security analytics pipeline and web modernization as a solo developer, owning the work from environment deployment through validation of data and metrics.
 
 I hold visas or entry permits for Hong Kong, Australia, New Zealand, Japan, and the Schengen Area, and am available to travel for in-person interviews. I passed CET-6 with a high score, can express my ideas in spoken English, and am currently preparing for IELTS.
 
