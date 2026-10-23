@@ -9,25 +9,31 @@ gaijianqiu@gmail.com · 616096372@qq.com
 
 ## 个人简介
 
-**以 AI 加速实现，以十余年工程经验把控系统深度与交付质量。熟练运用 Claude Code、Codex 完成重复编码与服务端逻辑，将主要精力投入原生系统深度集成、复杂故障定位，以及交互体验与界面细节打磨。面对文档不充分、运行行为与预期不符的问题，能够结合源码、运行时机制和真实设备验证追查根因，将生成代码转化为稳定、可维护的产品。**
+**通过 AI 将编码效率提升十倍以上：原预计约半年完成的 API 监测 Flink 项目，实际三周交付。熟练运用 Claude Code、Codex 承担重复编码与服务端逻辑，将十余年工程经验投入架构设计、文档不充分的原生系统深度集成与复杂排障，并以像素级标准打磨 UI 视觉细节、交互反馈与操作流畅度，兼顾用户体验、系统稳定性与交付质量。**
 
-在 iOS 安全领域，自主研发 hookengine 静态库，深入 Runtime、Mach-O 与现代链接机制，处理 Hook 检测、误报治理和宿主生命周期问题；在全栈领域，独立完成 API 安全分析链路与 Web 改造，从环境部署到数据口径核验承担完整交付责任。
+在 iOS 安全领域，自主研发 hookengine 静态库，深入 Runtime、Mach-O 与现代链接机制，处理 Hook 检测、误报治理和宿主生命周期问题；在全栈领域，独立完成 API 安全分析链路与 Web 改造，从环境部署到数据口径核验承担完整交付责任。具备 Swift、SwiftUI 实战经验，应用于华米产品开发及电科院安全监测壳子工程，能够结合现代界面开发、Objective-C 与底层 SDK 集成。
+
+了解我的职业经历与 AI 研发实践: [https://kennaki.github.io/portfolio/about.html](https://kennaki.github.io/portfolio/about.html)
 
 ## 工作经历
 
 ### 国网电力科学研究院有限公司 · 驻场项目
-2022.04 — 至今 · 研发组副组长（2025） / 移动端组长（2023） / iOS 开发
+2022.04 — 2026.10 · 研发组副组长（2025） / 移动端组长（2023） / iOS 开发
 
-- 自主研发移动安全监测 SDK 的 hookengine 静态库，负责安全接入 SDK 研发维护，主导鸿蒙 SDK 研发与发版；由端侧开发拓展至团队协作与全栈交付。
-- 单人使用 Claude Code、Codex 构建 API 实时分析链路，从 Mac mini 虚拟机环境搭建到内网部署，协调资源完成端到端交付。
+**Swift / SwiftUI / Objective-C / C / C++ / Java / Flink / Elasticsearch / Docker / Kubernetes**
+
+- 自主研发移动安全监测 SDK 的 hookengine 静态库，负责安全接入 SDK 研发维护，主导鸿蒙 SDK 研发与发版；由端侧开发拓展至团队协作与全栈交付。使用 Swift、SwiftUI 开发安全监测壳子工程。
+- 单人使用 Claude Code、Codex 构建 API 实时分析链路，从 Mac mini 虚拟机环境搭建到内网部署，协调资源完成端到端交付。原预计约半年，实际三周交付。
 - 项目论证与汇报：主导 2024、2025 年科技项目可研、概要设计及详细设计文档编写，承担北京总部技术汇报。
 - 重大问题处置：首问负责 i国网 Android 耗电问题，跨技术栈研读源码定位并修复；在总部汇报中以技术证据澄清责任，将团队责任占比降至 50%，并促成后续项目合作。
 
 ### 南京华米科技
 2020.02 — 2022.03 · iOS 开发 / 设备功能模块化项目负责人
 
+**Swift / SwiftUI / Bluetooth / CBB / Git hooks**
+
 - 推进 CBB 组件化方案调研与落地，承担设备功能模块化项目的任务拆解、资源协调和进度管理。
-- 开发维护小米运动、Zepp 的健康、表盘、实验室和世界时钟模块，积累蓝牙设备集成与功能复用经验；推动 SwiftUI 调研、Git hook 工具及技术文档沉淀。
+- 华米任职期间全程使用 Swift、SwiftUI，开发维护小米运动、Zepp 的健康、表盘、实验室和世界时钟模块，集成蓝牙设备与可复用功能，并沉淀 Git hook 工具及技术文档。
 
 ### 更早经历
 涂鸦智能（2018.10—2020.01）：商用 SDK、Wi-Fi 配网、ODM 定制及 CI/CD；与华米阶段共同形成蓝牙、BLE Mesh 和模块化经验。有货（2016.03—2018.10）：潮牌电商、React Native、直播推流、小程序及 Native A/B 测试。途牛旅游项目及早期移动开发（2012.10—2016.01，其中途牛任职 2014.03—2016.01）：iPad 大屏电商与旅游详情页，深化 Objective-C Runtime、RunLoop 等原生基础。
@@ -45,8 +51,9 @@ iOS 研发负责人 · 原生安全与稳定性
 - 基于 Objective-C Runtime 校验关键方法 IMP 所属镜像，结合系统库、主程序与允许列表识别异常来源，并校验 dladdr 等检测依赖，减少检测入口被篡改带来的盲区。
 - 重构前后台及网络变化驱动的检测调度，加入有界事件缓存与分路重试；围绕并发、定时器生命周期及宿主稳定性持续排障，输出复现步骤与验证记录。
 - 围绕真实越狱、Frida 注入、Method Swizzling 与 GOT 改写开展正反例验证；排查正常设备误报、移除异常后的恢复与再次触发，形成复现步骤、命中证据和自测记录。
+- 使用 Swift、SwiftUI 开发安全监测壳子工程，集成原生检测 SDK，支持真机检查检测结果及应用生命周期行为。
 
-Objective-C / C / C++ / Runtime / Mach-O / GCD / LLDB
+Swift / SwiftUI / Objective-C / C / C++ / Runtime / Mach-O / GCD / LLDB
 [项目详解](https://kennaki.github.io/portfolio/projects/mobile-security.html)
 
 ### 安全接入平台 SDK · ISCP / SSAG
@@ -63,6 +70,7 @@ Objective-C / C / C++ / Socket / OpenSSL / kqueue / Network.framework
 ### 移动 API 安全监测系统
 单人全栈交付 · AI 辅助研发
 
+- 原预计约半年完成，实际三周交付；使用 Claude Code、Codex 加速实现，亲自负责任务拆解、联调、验证与部署。
 - 从零搭建 Zeek→Kafka→Flink→Elasticsearch 分析链路，接管改造既有 Spring MVC Web 工程，替换供应商黑盒查询接口，新增 API 资产聚合与展示。
 - 实现窗口聚合、令牌与设备/IP 关联检测，以及基于约十万条设备记录的 H5 信息补全；完善风险、敏感数据、态势图表、筛选与导出。
 - 独立协调并完成从 ARM 开发环境到 x86 隔离内网的部署，解决离线依赖、镜像缓存、字段解析、索引类型及时间/计数口径问题，沉淀测试与交接材料。
@@ -71,5 +79,15 @@ Objective-C / C / C++ / Socket / OpenSSL / kqueue / Network.framework
 
 Java / Flink / Zeek / Kafka / Elasticsearch / MySQL / Spring MVC / Docker / Kubernetes
 [项目详解](https://kennaki.github.io/portfolio/projects/api-security.html)
+
+## 原生工程能力
+
+结合 Swift、SwiftUI 产品开发与 Objective-C／C／C++ SDK 集成经验，能从界面行为追踪至运行时证据及底层资源生命周期，跨层定位问题。安全能力以真实攻击样本与正常设备双向验证，兼顾移除异常后的恢复与再次触发，并保留可复现步骤，支持后续回归与交接。
+
+## 工程方法与个人优势
+
+- 将 AI 融入实现、重构、测试脚本与文档整理，先拆解可验证任务，再按接口契约审查生成结果，以实际运行行为确认交付。
+- 能够串联产品界面、原生运行时与后端数据链路；通过源码、回调、日志与部署产物定位问题，将已确认根因沉淀为可复现检查与交接材料。
+- 兼具独立交付与技术带队经验：协调资源、记录设计决策、向相关方讲清复杂问题，同时亲自处理关键技术难点。
 
 早期项目与技术实践: [https://kennaki.github.io/portfolio/#earlier](https://kennaki.github.io/portfolio/#earlier)

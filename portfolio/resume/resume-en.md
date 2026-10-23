@@ -9,30 +9,36 @@ gaijianqiu@gmail.com · 616096372@qq.com
 
 ## Profile
 
-**AI-accelerated builder with over a decade of engineering judgment. Use Claude Code and Codex to accelerate routine implementation and server-side logic, focusing my expertise on deep native OS integration, complex troubleshooting, and precise interaction and UI details. Investigate poorly documented behavior through source analysis, runtime inspection, and real-device validation, turning generated code into reliable, maintainable products.**
+**AI-accelerated builder with more than 10x coding productivity: delivered an API monitoring project in three weeks against an estimated six months. Use Claude Code and Codex for boilerplate and server logic; apply over a decade of experience to architecture, poorly documented native OS integrations, complex troubleshooting and pixel-perfect UI/UX, refining visuals, interaction feedback and fluid workflows for reliable delivery.**
 
-Independently developed the hookengine static library for iOS security, applying Runtime, Mach-O and modern linking knowledge to hook detection, false-positive analysis and host-app lifecycle issues. Delivered an API security analytics pipeline and web modernization as a solo developer, owning the work from environment deployment through validation of data and metrics.
+Swift/SwiftUI experience across Huami and State Grid projects. Independently build native security SDKs and full-stack analytics, combining Runtime/Mach-O expertise, UI integration, real-device validation and deployment.
 
-I hold visas or entry permits for Hong Kong, Australia, New Zealand, Japan, and the Schengen Area, and am available to travel for in-person interviews. I passed CET-6 with a high score, can express my ideas in spoken English, and am currently preparing for IELTS.
+Visas/entry permits: Hong Kong, Australia, New Zealand, Japan and the Schengen Area; available for in-person interviews. High-scoring CET-6 pass; conversational English; preparing for IELTS.
+
+More about my journey & AI practice: [https://kennaki.github.io/portfolio/about-en.html](https://kennaki.github.io/portfolio/about-en.html)
 
 ## Experience
 
 ### State Grid Electric Power Research Institute
-Apr 2022 — Present · On-site contracted role · Deputy R&D Team Lead (2025) / Mobile Team Lead (2023)
+Apr 2022 — Oct 2026 · On-site contracted role · Deputy R&D Team Lead (2025) / Mobile Team Lead (2023)
 
-- Independently develop the hookengine static library for mobile security monitoring and maintain secure-access SDKs; lead HarmonyOS SDK delivery, expanding responsibility from iOS engineering to team coordination and full-stack delivery.
-- Sole developer of an AI-assisted API analytics pipeline, coordinating resources from Mac mini VM setup through deployment in an isolated internal environment.
-- Project communication: lead feasibility, high-level and detailed design documentation for 2024–2025 technology projects; present technical findings at headquarters in Beijing.
-- Incident ownership: investigate and fix the iState Grid Android battery-drain issue through source analysis beyond my iOS remit. Present technical evidence at headquarters, reducing the team’s allocated responsibility to 50% and securing follow-on project collaboration.
+**Swift / SwiftUI / Objective-C / C / C++ / Java / Flink / Elasticsearch / Docker / Kubernetes**
+
+- Independently develop the hookengine security library and maintain secure-access SDKs; build the monitoring host app with Swift and SwiftUI and lead HarmonyOS SDK releases.
+- Solo-deliver the AI-assisted API analytics project in three weeks against an original estimate of approximately six months, from Mac mini VMs to isolated intranet deployment.
+- Lead feasibility, high-level and detailed design documents for 2024–2025 projects; present technical findings at Beijing headquarters.
+- Own and fix the iState Grid Android battery-drain incident through cross-stack source analysis; use technical evidence to reduce the team’s allocated responsibility to 50% and secure follow-on collaboration.
 
 ### Huami Technology · Nanjing
 Feb 2020 — Mar 2022 · iOS Engineer / Device Feature Modularization Project Lead
 
+**Swift / SwiftUI / Bluetooth / CBB / Git hooks**
+
 - Research and implement CBB modularization; break down device-feature work, coordinate engineering resources and manage delivery.
-- Develop health, watch-face, lab and world-clock modules for Mi Fit and Zepp; work on Bluetooth device integration and reuse. Contribute SwiftUI evaluation, Git hook tooling and technical documentation.
+- Use Swift and SwiftUI throughout Huami development for Mi Fit and Zepp: health, watch faces, lab and world clock; integrate Bluetooth devices and reusable modules; build Git hook tools and documentation.
 
 ### Earlier experience
-Tuya Smart (Oct 2018–Jan 2020): commercial SDKs, Wi-Fi provisioning, ODM and CI/CD; Bluetooth, BLE Mesh and modularization across Tuya and Huami. Yoho (Mar 2016–Oct 2018): fashion commerce, React Native, live streaming, mini programs and A/B testing. Tuniu projects and early mobile work (Oct 2012–Jan 2016; Tuniu employment Mar 2014–Jan 2016): iPad commerce, travel pages, Objective-C Runtime and RunLoop.
+Tuya Smart (Oct 2018–Jan 2020): commercial SDKs, Wi-Fi provisioning, ODM and CI/CD. Yoho (Mar 2016–Oct 2018): commerce, React Native, streaming, mini programs and A/B testing. Early mobile work (Oct 2012–Jan 2016; Tuniu Mar 2014–Jan 2016): iPad commerce, travel pages, Runtime and RunLoop.
 
 ## Education
 B.Mgt., Nanjing University of Chinese Medicine, 2012. Experience reading technical documentation and writing commercial SDK manuals.
@@ -47,8 +53,9 @@ iOS technical owner · Native security & reliability
 - Trace critical Objective-C method IMPs to their images, combining system-library, main-binary and allowlist checks. Validate detection dependencies such as dladdr to address tampered inspection paths.
 - Rework foreground/background and network-triggered scheduling, bounded event storage and per-destination retries; troubleshoot concurrency, timer lifecycle and host-app stability issues.
 - Validate with real jailbreak, Frida injection, Method Swizzling and GOT-rebinding cases plus clean-device controls. Investigate false positives, recovery and repeat triggers; retain reproducible steps and evidence.
+- Build the security-monitoring host app with Swift and SwiftUI, integrating the native detection SDK and supporting real-device validation of detection results and app lifecycle behavior.
 
-Objective-C / C / C++ / Runtime / Mach-O / GCD / LLDB
+Swift / SwiftUI / Objective-C / C / C++ / Runtime / Mach-O / GCD / LLDB
 [Case study](https://kennaki.github.io/portfolio/projects/mobile-security.html#english)
 
 ### Secure Access SDKs · ISCP / SSAG
@@ -65,6 +72,7 @@ Objective-C / C / C++ / Sockets / OpenSSL / kqueue / Network.framework
 ### Mobile API Security Analytics
 Solo full-stack delivery · AI-assisted development
 
+- Deliver in three weeks against an original estimate of approximately six months, using Claude Code and Codex to accelerate implementation while personally owning task breakdown, integration, validation and deployment.
 - Build the Zeek-to-Kafka-to-Flink-to-Elasticsearch pipeline from scratch; modernize an existing Spring MVC web application, replace a vendor query service and add API asset aggregation and views.
 - Implement windowed aggregation, token/device/IP correlation and H5 enrichment against an approximately 100,000-record device index; improve risk views, charts, filters and exports.
 - Coordinate delivery from ARM development to isolated x86 infrastructure. Resolve offline dependency, stale-image, parsing, index-mapping, timezone and counting issues; document tests and handoff procedures.
@@ -73,5 +81,15 @@ Solo full-stack delivery · AI-assisted development
 
 Java / Flink / Zeek / Kafka / Elasticsearch / MySQL / Spring MVC / Docker / Kubernetes
 [Case study](https://kennaki.github.io/portfolio/projects/api-security.html#english)
+
+## Native engineering strengths
+
+Combine Swift and SwiftUI product development with Objective-C/C/C++ SDK integration. Move between UI behavior, runtime evidence and native resource lifecycles to diagnose issues across layers. Validate security features against both real attack samples and clean devices; check recovery and repeat triggers, and preserve reproduction steps for regression and handoff.
+
+## Engineering approach & strengths
+
+- Apply AI to implementation, refactoring, test scripts and documentation. Define verifiable tasks, review interface contracts and validate runtime behavior before delivery.
+- Connect product UI, native runtime and backend data. Trace source, callbacks, logs and deployed artifacts; document confirmed root causes, reproducible checks and handoff procedures.
+- Combine hands-on delivery with technical leadership: coordinate resources, record design decisions and explain complex issues to stakeholders.
 
 Earlier projects & engineering practice: [https://kennaki.github.io/portfolio/#earlier](https://kennaki.github.io/portfolio/#earlier)
